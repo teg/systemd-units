@@ -1,4 +1,5 @@
 Systemd cross distro unit repository. 
+=====================================
 
 Each unit file here is written for systemd v30 or higher and 
 binary's residing in /usr and aimed at being as much distro 
@@ -8,10 +9,46 @@ distribution so you might have to tailor it to your distribution.
 
 Especially pay attention to $PATH in units! 
 
+Layout
+------
+
+    /
+        /projects
+            /${tarballname}
+                /{service,target,socket,path}
+                /patches
+                README
+        /scripts
+
+Distributions
+-------------
+
+Each distribution is welcome to add a branch with their currently shipped
+systemd units. These are meant both as a central location for their packages
+to pull from, and also to help unification so everyone will eventually end
+up with the common units.
+
+They are also welcome to add any scripts related to generating/collecting these
+units under scripts/.
+
+Guidelines for master branch
+-----------------------------
+
+Unit files should stay in a subdirectory with the same name as the upstream
+tarball of the project.
+
 The unit(s) residing in this repository should be upstream acceptable 
 and work across all GNU/Linux distributions that use systemd.
 
-To contribute see CONTRIBUTE 
+No references to non-upsteram/non-shared units.
+
+Avoid EnvironmentFile= to the extent possible. If it must be used, don't place
+configuration files in distro-specific locations. Probably
+/etc/$tarballname/\*.conf or /etc/$tarballname.conf is best. Prefer to patch the
+upstream sorce to read config file(s) directly.
+
+License
+-------
 
 All files in this repo are licensed under the MIT license.
 
