@@ -6,10 +6,10 @@ This is a collaborative repository for distributions to share unit files.
 Layout
 ------
 
-/
-  /common:   the unit files that we have agreed on as the 'standard' ones, should
+    /
+      /common:   the unit files that we have agreed on as the 'standard' ones, should
              these should be attempted to be pushed upstream
-  /{arch,opensuse,mageia,fedora,gentoo,...}/$tarballname/:
+      /{arch,opensuse,mageia,fedora,gentoo,...}/$tarballname/:
              copies of the unit files specific to each distro, as they are
              currently shipped
 
