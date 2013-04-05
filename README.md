@@ -7,11 +7,12 @@ Layout
 ------
 
     /
-      /common:   the unit files that we have agreed on as the 'standard' ones, should
-             these should be attempted to be pushed upstream
+      /common/$tarballname/:
+          the unit files that we have agreed on as the 'standard' ones, these
+          should be attempted to be pushed upstream
       /{arch,opensuse,mageia,fedora,gentoo,...}/$tarballname/:
-             copies of the unit files specific to each distro, as they are
-             currently shipped
+          copies of the unit files specific to each distro, as they are
+          currently shipped
 
 Guidelines for shared unit files
 --------------------------------
