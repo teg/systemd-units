@@ -5,7 +5,7 @@ for package in *; do
         for unit in *.{service,socket}; do
                 if [ -f ${unit} ]; then
                         echo ${unit}
-                        install -Dm644 ${unit} ../../../systemd-units/arch/${package}/${unit}
+                        install -Dm644 ${unit} ../../../systemd-units/projects/${package}/${unit}
                 fi
         done
         cd ../../
